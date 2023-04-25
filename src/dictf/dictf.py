@@ -7,7 +7,7 @@ class dictf(UserDict):
 
         if isinstance(key, (tuple, list, set)):
             key_set = set(key)
-            result = dict()
+            result = self.__class__()
             for k in key_set:
                 result[k] = self.data[k]
         else:
